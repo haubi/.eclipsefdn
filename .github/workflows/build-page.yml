@@ -30,17 +30,11 @@ jobs:
       - name: Checkout OtterDog
         run: git clone https://gitlab.eclipse.org/eclipsefdn/security/otterdog.git
 
-      - name: Checkout EclipseFdn/otterdog-configs
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
-        with:
-          repository: EclipseFdn/otterdog-configs
-          path: otterdog-configs
-
       # checkout the HEAD ref
       - name: Checkout HEAD
         uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
         with:
-          path: ${{ github.repository_owner }}
+          path: work
 
       - name: Install jsonnet-bundler
         run: |
@@ -64,25 +58,25 @@ jobs:
       - name: Copy configuration from HEAD ref
         run: |
           mkdir -p orgs/${{ github.repository_owner }}
-          cp -r ../${{ github.repository_owner }}/otterdog/* orgs/${{ github.repository_owner }}
-        working-directory: otterdog-configs
+          cp -r otterdog/* orgs/${{ github.repository_owner }}
+        working-directory: work
 
       - name: Generate current configuration as markdown
         run: ../otterdog/otterdog.sh show ${{ github.repository_owner }} -c otterdog.json --markdown --output-dir generated-site
-        working-directory: otterdog-configs
+        working-directory: work
 
       - name: Generate default configuration as markdown
         run: ../otterdog/otterdog.sh show-default ${{ github.repository_owner }} -c otterdog.json --markdown > default.txt
-        working-directory: otterdog-configs
+        working-directory: work
 
       - name: Upload generated site content
         uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 # v3
         with:
           name: generated-site
           path: |
-            otterdog-configs/default.txt
-            otterdog-configs/orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet
-            otterdog-configs/generated-site/
+            work/default.txt
+            work/orgs/${{ github.repository_owner }}/vendor/otterdog-defaults/*.libsonnet
+            work/generated-site/
 
   build-page:
     runs-on: ubuntu-latest
