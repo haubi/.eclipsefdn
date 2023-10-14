@@ -9,13 +9,13 @@ orgs.newOrg('EclipseConTutorial') {
     dependency_graph_enabled_for_new_repositories: false,
     discussion_source_repository: "EclipseConTutorial/.github",
     has_discussions: true,
+    has_organization_projects: false,
+    has_repository_projects: false,
     packages_containers_internal: false,
     packages_containers_public: false,
+    readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
-    workflows+: {
-      actions_can_approve_pull_request_reviews: false,
-    },
   },
   _repositories+:: [
     orgs.newRepo('.github') {
@@ -23,6 +23,9 @@ orgs.newOrg('EclipseConTutorial') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       has_discussions: true,
+      has_projects: false,
+      has_issues: false,
+      has_wiki: false,
       web_commit_signoff_required: false,
     },
   ],
