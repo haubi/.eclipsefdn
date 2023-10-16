@@ -49,7 +49,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-1') {
+    orgs.newRepo('test-repo-alpha') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -65,7 +65,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-2') {
+    orgs.newRepo('test-repo-beta') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -81,7 +81,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-3') {
+    orgs.newRepo('test-repo-mu') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -97,7 +97,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-4') {
+    orgs.newRepo('test-repo-delta') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -113,7 +113,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-5') {
+    orgs.newRepo('test-repo-epsilon') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -129,7 +129,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-6') {
+    orgs.newRepo('test-repo-zeta') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -145,7 +145,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-7') {
+    orgs.newRepo('test-repo-theta') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -161,7 +161,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-8') {
+    orgs.newRepo('test-repo-iota') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -177,7 +177,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-9') {
+    orgs.newRepo('test-repo-kappa') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
@@ -193,7 +193,7 @@ orgs.newOrg('EclipseConTutorial') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('test-repo-10') {
+    orgs.newRepo('test-repo-lambda') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
