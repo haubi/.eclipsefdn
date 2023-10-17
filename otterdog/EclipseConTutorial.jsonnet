@@ -152,8 +152,9 @@ orgs.newOrg('EclipseConTutorial') {
       has_wiki: false,
       has_projects: false,
       is_template: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
+      # remove these 2 lines to enable secret scanning and push protection.
+      # secret_scanning: "disabled",
+      # secret_scanning_push_protection: "disabled",
       template_repository: "EclipseConTutorial/test-repo-template",
       web_commit_signoff_required: false,
       workflows+: {
