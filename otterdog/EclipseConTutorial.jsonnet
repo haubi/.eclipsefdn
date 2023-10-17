@@ -144,9 +144,9 @@ orgs.newOrg('EclipseConTutorial') {
       },
     },
     orgs.newRepo('test-repo-zeta') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
+      allow_merge_commit: false,
+      allow_update_branch: true,
+      delete_branch_on_merge: true,
       dependabot_alerts_enabled: true,
       has_wiki: false,
       has_projects: false,
