@@ -177,6 +177,13 @@ orgs.newOrg('EclipseConTutorial') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      branch_protection_rules: [
+         orgs.newBranchProtectionRule('main') {
+               # lets set the required number of approvals to 0 to make changes later
+               # on easier for the purpose of this tutorial
+               required_approving_review_count: 0
+         }
+      ],
     },
     orgs.newRepo('test-repo-iota') {
       allow_merge_commit: true,
