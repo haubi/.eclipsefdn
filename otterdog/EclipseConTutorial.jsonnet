@@ -169,6 +169,7 @@ orgs.newOrg('EclipseConTutorial') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
       has_wiki: false,
       has_projects: false,
       is_template: true,
