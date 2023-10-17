@@ -14,9 +14,6 @@ orgs.newOrg('EclipseConTutorial') {
     packages_containers_internal: false,
     packages_containers_public: false,
     readers_can_create_discussions: true,
-    security_managers+: [
-      "committers"
-    ],
     two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
@@ -211,22 +208,6 @@ orgs.newOrg('EclipseConTutorial') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-    },
-    orgs.newRepo('improved-test-repo') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: true,
-      has_wiki: false,
-      has_projects: false,
-      is_template: true,
-      template_repository: "EclipseConTutorial/test-repo-template",
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "read",
-      },
-      branch_protection_rules: [
-         orgs.newBranchProtectionRule('main')
-      ],
     },
   ],
 }
