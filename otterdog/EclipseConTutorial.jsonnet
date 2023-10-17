@@ -213,7 +213,7 @@ orgs.newOrg('EclipseConTutorial') {
       template_repository: "EclipseConTutorial/test-repo-template",
       web_commit_signoff_required: false,
       workflows+: {
-        default_workflow_permissions: "write",
+        default_workflow_permissions: "read",
       },
       branch_protection_rules: [
          orgs.newBranchProtectionRule('main') {
